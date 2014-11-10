@@ -6,14 +6,23 @@ function d(data) {
 
 var main = function() {
     var canvas = document.getElementById('canvas');
-    //canvas.height = window
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
     var context = canvas.getContext('2d');
     context.lineWidth = 1;
     context.strokeStyle = 'red';
     var drawing = false;
-    
+
+    window.addEventListener(
+        'resize',
+        function() {
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+            context.lineWidth = 1;
+            context.strokeStyle = 'red';
+        },
+        false
+    );
 
     canvas.addEventListener(
         'touchstart',
@@ -47,5 +56,4 @@ var main = function() {
         },
         false
     );
-
 }();
