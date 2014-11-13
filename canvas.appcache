@@ -4,3 +4,7 @@ css/main.css
 nice-highres.png
 manifest.json
 js/main.js
+
+NETWORK:
+js/update.js
+version.json

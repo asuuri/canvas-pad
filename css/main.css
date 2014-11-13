@@ -33,6 +33,10 @@ ul, li {
     border-left: 4px solid #666;
 }
 
+.color-selector li.active {
+    border-color: #aaa;
+}
+
 .color-selector li:last-child {
     border-bottom: 4px solid #666;
 }

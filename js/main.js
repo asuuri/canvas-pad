@@ -19,7 +19,14 @@ function initColorPicker(colorSetter) {
 
         picker.style.backgroundColor = color;
         picker.addEventListener('touchstart', function() {
+            var active = document.querySelector('.color-selector li.active');
+            if (active) {
+                active.className = '';
+            }
+
             colorSetter(this.dataset.color);
+
+            this.className = 'active';
         });
     }
 }
@@ -33,7 +40,6 @@ var main = function() {
 
     initColorPicker(
         function(color) {
-            console.debug(context, color);
             setStroke(context, color);
         }
     );
