@@ -10,3 +10,29 @@ html, body {
     width: 100%;
     position: absolute;
 }
+.canvas.white {
+    background-color: #fff;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.color-selector {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.color-selector li {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #666;
+    border-left: 4px solid #666;
+}
+
+.color-selector li:last-child {
+    border-bottom: 4px solid #666;
+}

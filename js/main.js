@@ -1,7 +1,27 @@
 "use strict";
 
-function d(data) {
-    console.debug(data);
+function setStroke(context, color) {
+    if (color !== undefined) {
+        context.strokeStyle = color;
+    } else {
+        context.strokeStyle = 'red';
+    }
+    context.lineWidth = 5;
+    context.lineCap = 'round';
+}
+
+function initColorPicker(colorSetter) {
+    var pickers = document.querySelectorAll('.color-selector li');
+
+    for(var index = 0; index < pickers.length; index++) {
+        var picker = pickers[index];
+        var color = picker.dataset.color;
+
+        picker.style.backgroundColor = color;
+        picker.addEventListener('touchstart', function() {
+            colorSetter(this.dataset.color);
+        });
+    }
 }
 
 var main = function() {
@@ -9,8 +29,15 @@ var main = function() {
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
     var context = canvas.getContext('2d');
-    context.lineWidth = 1;
-    context.strokeStyle = 'red';
+    setStroke(context);
+
+    initColorPicker(
+        function(color) {
+            console.debug(context, color);
+            setStroke(context, color);
+        }
+    );
+
     var drawing = false;
 
     window.addEventListener(
@@ -18,8 +45,7 @@ var main = function() {
         function() {
             canvas.height = window.innerHeight;
             canvas.width = window.innerWidth;
-            context.lineWidth = 1;
-            context.strokeStyle = 'red';
+            setStroke(context);
         },
         false
     );
@@ -31,7 +57,6 @@ var main = function() {
             var touch = event.changedTouches[0];
             context.beginPath();
             context.moveTo(touch.clientX, touch.clientY);
-            d(event);
         },
         false
     );
