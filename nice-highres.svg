@@ -22,14 +22,13 @@
   <defs
      id="defs4">
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient3763">
       <stop
-         style="stop-color:#e2e2e2;stop-opacity:1;"
+         style="stop-color:#d5d5d5;stop-opacity:1;"
          offset="0"
          id="stop3765" />
       <stop
-         style="stop-color:#e2e2e2;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:1;"
          offset="1"
          id="stop3767" />
     </linearGradient>
@@ -37,10 +36,10 @@
        inkscape:collect="always"
        xlink:href="#linearGradient3763"
        id="linearGradient3769"
-       x1="36.42857"
-       y1="1030.7908"
-       x2="179.57143"
-       y2="878.64789"
+       x1="55.621468"
+       y1="1049.4786"
+       x2="112.90136"
+       y2="867.03113"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
@@ -52,7 +51,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
      inkscape:cx="61.518235"
-     inkscape:cy="140.28969"
+     inkscape:cy="99.883585"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -69,6 +68,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -84,7 +84,10 @@
        height="187.71428"
        x="2"
        y="862.64789"
-       ry="35" />
+       ry="35"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/home/eino/NetBeansProjects/sandbox/canvas/nice-highres.png" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot3755"
