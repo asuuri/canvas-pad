@@ -1,2 +1,0 @@
-// Updates app if needed.
-

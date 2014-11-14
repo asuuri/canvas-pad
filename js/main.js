@@ -11,7 +11,7 @@ function setStroke(context, color) {
 }
 
 function initColorPicker(colorSetter) {
-    var pickers = document.querySelectorAll('.color-selector li');
+    var pickers = document.querySelectorAll('.tool-selector li');
 
     for(var index = 0; index < pickers.length; index++) {
         var picker = pickers[index];
@@ -19,7 +19,7 @@ function initColorPicker(colorSetter) {
 
         picker.style.backgroundColor = color;
         picker.addEventListener('touchstart', function() {
-            var active = document.querySelector('.color-selector li.active');
+            var active = document.querySelector('.tool-selector li.active');
             if (active) {
                 active.className = '';
             }
@@ -29,6 +29,9 @@ function initColorPicker(colorSetter) {
             this.className = 'active';
         });
     }
+
+    pickers[0].className = 'active';
+    colorSetter(pickers[0].dataset.color);
 }
 
 var main = function() {
