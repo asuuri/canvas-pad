@@ -34,6 +34,7 @@ function initColorPicker(colorSetter) {
     colorSetter(pickers[0].dataset.color);
 }
 
+// Main function
 var main = function() {
     var canvas = document.getElementById('canvas');
     canvas.height = window.innerHeight;
