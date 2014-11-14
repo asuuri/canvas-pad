@@ -3,11 +3,14 @@
 function setStroke(context, color) {
     if (color !== undefined) {
         context.strokeStyle = color;
-    } else {
-        context.strokeStyle = 'red';
     }
-    context.lineWidth = 5;
+
+    context.lineWidth = 1;
     context.lineCap = 'round';
+    context.shadowColor = color;
+    context.shadowBlur = 10;
+    context.shadowOffsetX = 0;
+    context.shadowOffsetY = 0;
 }
 
 function initColorPicker(colorSetter) {
